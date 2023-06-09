@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JAVA</title>
+    <style>
+        body{
+            background-color: rgb(149, 195, 233);
+        font-size: large;
+        border:2px solid black;
+        padding-left: 23px;
+        padding-top:29px;
+        padding-bottom: 23px;
+            
+        }
+        h1{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>All About Javascript</h1>
+ 
+    <script>
+
+
+
+document.write(" hello world");
+document.write("<br>");
+
+
+
+
+//alert command
+alert("Are u ready  to start frontend journey");
+//values and variables
+// starting with underscore
+// can used Dollar Sign in starting
+// Spacing nit allowed between varibale name
+// reserved words are not used
+// coding convention (Camel case)
+//can not start with number
+var _myname = `Amina Parveen`;
+document.write(_myname);
+document.write("<br>");
+var $myage = 21;
+document.write($myage);
+document.write("<br>");
+
+// data  types in javascript(which type of data  are stored)
+// undefined,boolean,number,string,Bignit,Symbol
+var myname = "Alnoor";//string type of data 
+document.write(myname);
+document.write("<br>");
+var month = 4;
+document.write(month);
+document.write("<br>");
+
+// u can check the datatype  of what u have written
+// by type of operator
+document.write(typeof (myname));
+document.write( ("<br>"));
+document.write( ("<br>"));
+var masjid = "true"
+document.write("masjid");
+document.write("<br>");
+document.write(typeof ("masjid"));
+document.write( ("<br>"));
+// null & undefined(interview quiestion)
+var itsWeb = "null";
+document.write(itsWeb);
+document.write("<br>");
+document.write(typeof (itsWeb));
+document.write( ("<br>"));
+var itsnotweb;
+document.write(typeof (itsnotweb));
+document.write( ("<br>"));
+
+//NaN(interview question)(When u minus two strings it gives NaN)
+document.write("Amina" - "Alina");
+document.write("<br>");
+
+var number = 990;
+var name = "web";
+document.write(isNaN(number));
+document.write(("<br>"));
+
+document.write(isNaN(name));
+document.write("<br>");
+
+//Expression is the combination of operator and operand
+document.write(5 + 20);
+document.write("<br>");
+document.write(5 - 20);
+document.write("<br>");
+document.write(5 * 20);
+document.write("<br>");
+document.write(5 / 20);
+document.write("<br>");
+ document.write(5 % 20);
+ document.write("<br>");
+ var a = 10;
+var b = 8;
+document.write("increment is " + a++);
+document.write("<br>");
+document.write("increment is " + ++a);
+document.write("<br>");
+document.write("decremnet  is " + --b);
+document.write("<br>");
+document.write("decrement is " + b--);
+document.write("<br>");
+//Comparsion opeartors
+var c = 1;
+var d = 2;
+document.write(a == b);
+document.write("<br>");
+document.write(a > b);
+document.write("<br>");
+document.write(a < b);
+document.write("<br>");
+document.write(c < d && c > d);
+document.write("<br>");
+// OR operator  only one condition is true
+document.write(c < d || c > d);
+document.write("<br>");
+//logical not operator
+document.write(!((c > 0) || (d > 0)));
+document.write("<br>");
+// String comcatenation
+document.write("Hello world");
+document.write("<br>");
+document.write("Hello" + "world");
+document.write("<br>");
+var name = "Amina"
+document.write(name + "Parveen");
+document.write("<br>");
+//challenge time
+//Exponentian opeartor
+document.write(2 ** 3);
+//Swap two numbers without using third variable
+var num1 = 2;
+var num2 = 3;
+num1 = num1 + num2;
+num2 = num1 - num2;
+num1 = num1 - num2;
+
+
+document.write(num1);
+document.write("<br>");
+document.write(num2);
+document.write("<br>");
+//interview Question
+// Difference between == and ===
+var _1 = 2;
+var _2 = '2';
+document.write(typeof (_1));
+document.write("<br>");
+document.write(typeof (_2));
+document.write("<br>");
+// == check only the values
+// === Also checks the value and datatypes
+document.write(_1 == _2);
+document.write("<br>");
+document.write(_1 === _2);
+document.write("<br>");
+// Control Statments and loops
+// if else,switch,for loop,for in loop
+var roza = 'eid';
+if (roza = 'eid') {
+    document.write("Eid");
+    document.write("<br>");
+
+}
+else {
+    document.write("Not Eid");
+}
+
+// /Now move to the advanced javascript (ECMAScri//conddocument.writeary operator)
+var age = 20;
+
+document.write((age > 18) ? "u are mature" : "u are not mature");
+document.write("<br>");
+
+//if else if area of circle
+var area = "circle";
+var PI = 3.14, l = 2, w = 3, r = 2;
+if (area = "circle") {
+document.write("Area of Circle is " + PI * r ** r);
+}
+document.write("<br>");
+//Switch Statements 
+var area = "Rectangle";
+var PI = 3.14, l = 2, w = 3, r = 2;
+switch (area) {
+    case 'circle':
+    document.write("the area of circle is" + PI * r ** r);
+        break;
+    case 'Rectangle':
+    document.write("the area of Rectangle is" + l + w / 2);
+    default:
+        break;
+}
+// document.write("<br>");
+// var a = 2;
+// while (a < 10) {
+//     document.write("numbers are" + a);
+//     a++;
+
+// }document.write("<br>");
+// // document.write("Do-while");
+// var a = 2;
+// do {
+//     document.write("numbers are" + a);
+//     a++;
+// }
+// while (a < 10);
+// document.write("<br>");
+//for  loop
+for (var r = 1; r < 2; r++) {
+    document.write("there will be eid");
+}document.write("<br>");
+//Table of 8
+for (var table = 1; table < 10; table++) {
+    var tableof = 8;
+    document.write(tableof + "*" + table + "=" + tableof * table);
+    document.write("<br>");
+
+}
+//Functions in javascript(block of code design to perform a particular task)
+// Function defination(// Function declaration)
+
+function sum(a, b) {// Function defination
+    var a = 2;
+    var b = 2;
+    var total = a + b;
+    document.write(total);document.write("<br>");
+}
+//Function calling
+sum();
+//Function parameters( (are in the function defination) and function  arguments(in the calling function)
+function differ(a, b, c) {
+    var total = a - b - c;
+    document.write(total);
+    document.write("<br>");
+}
+
+
+
+    </script>
+</body>
+</html>

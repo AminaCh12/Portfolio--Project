@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Jokes</title>
+    <!-- <link rel="stylesheet" href="project1.css"> -->
+    <style>
+        .container{
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border:2px solid rgb(29, 28, 28);
+    display: inline-block;
+    padding-top: 50px ;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 424px;
+    margin-top: 204px;
+    background-color: burlywood;
+}
+.color{
+    background-color: brown;
+    padding-bottom: 150px;
+}
+
+
+
+
+h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+.joke{
+font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+#jokeBtn{
+    background-color: rgb(198,85,85);
+  font-style: italic;
+    border-radius: 12px;
+    border: 1px solid white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 119px;
+}
+#jokeBtn:hover{
+    background-color:rgb(255, 77, 0);
+    
+  
+}
+    </style>
+    <script>
+        
+const jokes = document.querySelector('#joke');
+const jokeBtn = document.querySelector('#jokeBtn');
+const generateJokes = () => {
+    const setHeader = {
+        headers: {
+            Accept: "application/json"
+        }
+    }
+    fetch('https://icanhazdadjoke.com', setHeader)
+        .then((res) =>
+            res.json())
+        .then((data) => {
+            jokes.innerHTML = data.joke;
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+jokeBtn.addEventListener('click', generateJokes);
+generateJokes();
+
+// GET https://icanhazdadjoke.com/
+jokeBtn.addEventListener('click', generateJokes);
+generateJokes();
+
+
+    </script>
+</head>
+
+<body>
+    <div class="color">
+        <div class="container">
+            <h2> Best jokes to make your day </h2>
+            <div id="joke" class="joke"> Awesome jokes are loading...........</div><br><br>
+            <button id="jokeBtn" class="btn">New Joke</button>
+        </div>
+    </div>
+    <script src="project1.js">
+
+    </script>
+</body>
+
+</html>
